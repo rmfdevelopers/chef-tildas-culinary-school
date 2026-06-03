@@ -4,24 +4,28 @@ import './globals.css';
 const heading = Playfair_Display({ 
   subsets: ['latin'], 
   variable: '--font-heading',
-  display: 'swap'
+  weight: ['400', '700', '900']
 });
 
 const body = Outfit({ 
   subsets: ['latin'], 
   variable: '--font-body',
-  display: 'swap'
+  weight: ['300', '400', '500', '700']
 });
 
 export const metadata = {
-  title: "Chef Tilda’s Culinary School | Lagos Culinary Excellence",
-  description: "Transform your passion into professional excellence. Join Nigeria's most prestigious academy for aspiring chefs and pastry artists.",
+  title: "Chef Tilda’s Culinary School | Lagos Culinary Academy",
+  description: "A premier Lagos academy dedicated to the art of culinary excellence, from professional chef diplomas to artisanal pastry craftsmanship.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${heading.variable} ${body.variable} font-sans antialiased`}>
+    <html lang="en">
+      <body className={`${heading.variable} ${body.variable} font-sans`}>
         {children}
       </body>
     </html>
